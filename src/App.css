@@ -10,6 +10,7 @@
 .Nav-logo {
   height: 20vmin;
   max-width: 1000px;
+  margin-top: 1rem;
 }
 
 .App-header {
@@ -43,5 +44,14 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Menu-img {
+  height: 20vmin;
+  max-width: 1000px;
+}
+
+.uk-navbar-nav>li.uk-active>a {
   color: white;
 }

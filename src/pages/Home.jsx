@@ -6,45 +6,48 @@ import Dutchtown from '../images/DUTCHTOWN.png';
 import Gonzales from '../images/GONZALES.png';
 
 function Home(props) {
-
-  UIkit.util.on('#js-scroll-trigger', 'beforescroll', function () {
+  const setToggle = () => {
     setTimeout(() => {
-    }, 1000)
-  });
+      props.setToggle(!props.toggle)
+    }, 980)
+  }
 
   return (
     <React.Fragment>
-      <header id="Top" className="App-header">
+      <header className="App-header">
         <a
           id="logo"
           href="#Menus"
           uk-scroll="true"
-          onClick={() => props.setToggle(!props.toggle)}
+          onClick={() => setToggle()}
         >
           <div>
             {props.toggle && (
-              <img src={logo} {...props.morph} className="App-logo" alt="logo" />
-            )
-            }
+              <img
+                src={logo}
+                {...props.morph}
+                className="App-logo"
+                alt="logo"
+              />
+            )}
           </div>
         </a>
         {props.toggle && (
           <a
-            id="js-scroll-trigger"
+            id="Continue"
             className="App-link"
             href="#Menus"
             uk-scroll="true"
-            uk-scrollspy="cls: uk-animation-fade;"
-            onClick={() => props.setToggle(!props.toggle)}
+            uk-scrollspy="cls: uk-animation-fade; repeat: true"
+            onClick={() => setToggle()}
           >
             Continue <i className="fas fa-arrow-right"></i>
           </a>
         )
         }
-        {/* <button onClick={() => props.setToggle(!props.toggle)}>Let's morph!</button> */}
       </header>
       <section id="Menus" className="Menu-section">
-        <div class="uk-child-width-1-2 uk-text-center" uk-grid>
+        <div className="uk-child-width-1-2 uk-text-center" uk-grid="true">
           <img src={Dutchtown} className="" alt="logo" />
           <img src={Gonzales} className="" alt="logo" />
         </div>

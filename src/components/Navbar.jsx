@@ -5,6 +5,12 @@ import logo from '../images/TSUNAMI-LOGO.png';
 
 
 function Navbar(props) {
+  const setToggle = () => {
+    setTimeout(() => {
+      props.setToggle(!props.toggle)
+    }, 980)
+  }
+
   return (
     <React.Fragment>
       <div className="uk-position-fixed">
@@ -14,16 +20,23 @@ function Navbar(props) {
               <ul className="uk-navbar-nav" uk-scrollspy-nav="closest: li; scroll: true">
                 <li className="uk-active">
                   <a href="#Top">
-                 { !props.toggle && (
-                    <img 
-                      src={logo} 
-                      {...props.morph} 
-                      className="Nav-logo"
-                      alt="logo" 
-                      onClick={() => props.setToggle(!props.toggle)}
-                    />
-                    ) 
-                  }
+                    {!props.toggle && (
+                      <img
+                        src={logo}
+                        {...props.morph}
+                        className="Nav-logo"
+                        alt="logo"
+                        onClick={() => setToggle()}
+                      />
+                    )}
+                    {props.toggle && (
+                      <img
+                        src={logo}
+                        {...props.morph}
+                        className="App-logo"
+                        alt="logo"
+                      />
+                    )}
                   </a>
                 </li>
                 <li>
