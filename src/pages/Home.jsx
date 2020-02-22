@@ -47,9 +47,15 @@ function Home(props) {
         }
       </header>
       <section id="Menus" className="Menu-section">
-        <div className="uk-child-width-1-2 uk-text-center" uk-grid="true">
-          <img src={Dutchtown} className="" alt="logo" />
-          <img src={Gonzales} className="" alt="logo" />
+        <div className="Menu-group uk-child-width-1-2 uk-text-center" uk-grid="true">
+          <div>
+            <h3 className="Menu-title">Dutchtown</h3>
+            <img src={Dutchtown} className="Menu-image" alt="logo" />
+          </div>
+          <div>
+            <h3 className="Menu-title">Gonzales</h3>
+            <img src={Gonzales} className="Menu-image" alt="logo" />
+          </div>
         </div>
       </section>
     </React.Fragment>

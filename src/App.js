@@ -28,9 +28,9 @@ function App() {
   const handleScroll = (e) => {
     let scrollY = window.scrollY
     let scrollLimit = 400
-    console.log("scrollY " + scrollY)
-    console.log("prevScroll " + prevScroll)
-    console.log(toggle)
+    // console.log("scrollY " + scrollY)
+    // console.log("prevScroll " + prevScroll)
+    // console.log(toggle)
 
     if(scrollY < scrollLimit && prevScroll === null && toggle) {
       setToggleExit(scrollY)

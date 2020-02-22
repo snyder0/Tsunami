@@ -47,9 +47,17 @@
   color: white;
 }
 
-.Menu-img {
-  height: 20vmin;
-  max-width: 1000px;
+.Menu-image {
+  height: 75vmin;
+  width: auto;
+}
+
+.Menu-group {
+  margin-top: 10rem;
+}
+
+.Menu-title {
+  color: white;
 }
 
 .uk-navbar-nav>li.uk-active>a {
