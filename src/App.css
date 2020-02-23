@@ -47,13 +47,20 @@
   color: white;
 }
 
+.Locations-section {
+  background-color: #282c34;
+  min-height: 90vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .Menu-image {
-  height: 75vmin;
+  height: 60vmin;
   width: auto;
 }
 
 .Menu-group {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .Menu-title {
@@ -62,4 +69,9 @@
 
 .uk-navbar-nav>li.uk-active>a {
   color: white;
+}
+
+.Modal-close {
+  color: white;
+  margin: -0.3rem;
 }
